@@ -88,6 +88,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* width: auto; */
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -3846,14 +3848,14 @@ fieldset:disabled .btn {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 0.5%;
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-padding-y: 0.3125%;
   --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-font-size: 150%;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -8204,8 +8206,9 @@ fieldset:disabled .btn {
 }
 
 .px-5 {
-  padding-right: 3rem !important;
-  padding-left: 3rem !important;
+  /*responsive*/
+  padding-right: 3% !important;
+  padding-left: 3% !important;
 }
 
 .py-0 {
@@ -8224,8 +8227,8 @@ fieldset:disabled .btn {
 }
 
 .py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 1% !important;
+  padding-bottom: 1% !important;
 }
 
 .py-4 {
@@ -12060,7 +12063,7 @@ html {
   justify-content: center;
   align-items: center;
   height: 150px; /* Adjust height as needed */
-  margin-bottom: 20px;
+  margin-bottom: 10%;
 }
 
 .image-container img {

@@ -116,7 +116,7 @@
                         <div class="small text-muted">Los Angeles, CA</div> -->
                       </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-12 col-lg-8 blurb pt-3">
                       <div>
                         PT. MUTIARA MAHAKAM PERSADA provides efficient and reliable coal delivery services. 
                         Our services encompass the transportation of coal from the mines to the ports, 
@@ -428,101 +428,248 @@
       body {
           font-family: Arial, sans-serif;
       }
-      h2 {
+      h1 {
           text-align: center;
           color: #FF00FF; /* Adjust the color as needed */
       }
-      table {
-          width: 100%;
-          border-collapse: collapse;
-          table-layout: fixed; /* Ensures the table layout is fixed */
+      .media-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
       }
-      th, td {
-          border: 1px solid black;
-          text-align: center;
-          padding: 10px;
-          vertical-align: middle; /* Center content vertically */
+      .media-item {
+          flex: 1 1 calc(25% - 10px); /* Responsive width for each item */
+          max-width: calc(25% - 10px);
+          box-sizing: border-box;
       }
       .media-container {
-          width: 200px; /* Set a fixed width for the media container */
-          height: 150px; /* Set a fixed height for the media container */
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio */
+          position: relative;
           overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto; /* Center the container horizontally */
       }
       .media-container img, .media-container video {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 100%;
           object-fit: cover; /* Ensures the media cover the container without distortion */
       }
+      @media (max-width: 992px) {
+          .media-item {
+              flex: 1 1 calc(33.333% - 10px);
+              max-width: calc(33.333% - 10px);
+          }
+      }
+      @media (max-width: 768px) {
+          .media-item {
+              flex: 1 1 calc(50% - 10px);
+              max-width: calc(50% - 10px);
+          }
+      }
+      @media (max-width: 576px) {
+          .media-item {
+              flex: 1 1 100%;
+              max-width: 100%;
+          }
+      }
   </style>
-    <div class="text-center mb-5">
-    <h1 class="display-5 fw-bolder mb-0">
-      <span class="text-gradient d-inline">Project</span>
-    </h1>
-    </div>
-    <table>
-      <!-- Row for Photos -->
-      <tr>
-          <td>
-              <div class="media-container">
-                  <img src="assets/batubara.jpeg" alt="Photo 1">
+</head>
+<body>
+  <div class="text-center mb-5">
+      <h1 class="display-5 fw-bolder mb-0">
+          <span class="text-gradient d-inline">Project</span>
+      </h1>
+  </div>
+
+  <div class="media-grid">
+      <div class="media-item">
+          <div class="media-container">
+              <video controls>
+                  <source src="assets/4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
+      <div class="media-item">
+          <div class="media-container">
+              <video controls>
+                  <source src="assets/truck-lagi-kerja.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
+      <div class="media-item">
+          <div class="media-container">
+              <video controls>
+                  <source src="assets/jetty.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
+      <div class="media-item">
+          <div class="media-container">
+              <video controls>
+                  <source src="assets/kerja-tambang.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
+  </div>
+  <!-- Portfolio Grid-->
+  <section class="page-section bg-light" id="portfolio">
+      <div class="container">
+          <div class="media-grid">
+              <div class="media-item">
+                  <!-- Portfolio item 1-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/batubara.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <img src="assets/truck2.jpeg" alt="Photo 2">
+              <div class="media-item">
+                  <!-- Portfolio item 2-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/truck2.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <img src="assets/survey-client.jpeg" alt="Photo 3">
+              <div class="media-item">
+                  <!-- Portfolio item 3-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/truck-ditambang.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <img src="assets/kapal1.jpeg" alt="Photo 4">
+              <div class="media-item">
+                  <!-- Portfolio item 4-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/kapal4.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-      </tr>
-      <!-- Row for Videos -->
-      <tr>
-          <td>
-              <div class="media-container">
-                  <video controls>
-                      <source src="assets/4.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
+              <div class="media-item">
+                  <!-- Portfolio item 5-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/eksavator2.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <video controls>
-                      <source src="assets/truck-lagi-kerja.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
+              <div class="media-item">
+                  <!-- Portfolio item 5-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/kapal1.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <video controls>
-                      <source src="assets/jetty.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
+              <div class="media-item">
+                  <!-- Portfolio item 5-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/jejeran-truck.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
               </div>
-          </td>
-          <td>
-              <div class="media-container">
-                  <video controls>
-                      <source src="assets/kerja-tambang.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
+              <div class="media-item">
+                <!-- Portfolio item 5-->
+                <div class="portfolio-item">
+                  <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <div class="media-container">
+                          <img class="img-fluid" src="assets/survey-client.jpeg" alt="..." />
+                      </div>
+                  </a>
               </div>
-          </td>
-      </tr>
-  </table>
+          </div>
+          <div class="media-item">
+            <!-- Portfolio item 5-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                  <div class="portfolio-hover">
+                      <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                  </div>
+                  <div class="media-container">
+                      <img class="img-fluid" src="assets/client-silika.jpeg" alt="..." />
+                  </div>
+              </a>
+          </div>
+      </div>
+      <div class="media-item">
+        <!-- Portfolio item 5-->
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <div class="media-container">
+                  <img class="img-fluid" src="assets/viem-tambang-silika.jpeg" alt="..." />
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="media-item">
+                  <!-- Portfolio item 6-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <div class="media-container">
+                              <img class="img-fluid" src="assets/silika3.jpeg" alt="..." />
+                          </div>
+                      </a>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+  </section>
+  <!--  -->
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
       <div class="container px-5">
